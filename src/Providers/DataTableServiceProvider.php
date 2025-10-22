@@ -1,0 +1,74 @@
+<?php
+
+declare(strict_types=1);
+
+namespace SubhashLadumor\DataTablePro\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use SubhashLadumor\DataTablePro\DataTable\Builder;
+use SubhashLadumor\DataTablePro\DataTable\ExportManager;
+
+/**
+ * DataTableServiceProvider
+ *
+ * Registers the DataTablePro package services, views, assets, routes, and publishes resources.
+ */
+class DataTableServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/datatable.php',
+            'datatable'
+        );
+
+        $this->app->singleton(ExportManager::class, function ($app) {
+            return new ExportManager($app);
+        });
+
+        $this->app->bind('datatable', function ($app) {
+            return new Builder();
+        });
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'datatable');
+        
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/dtable.php');
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/datatable.php' => config_path('datatable.php'),
+            ], 'datatable-config');
+
+            $this->publishes([
+                __DIR__ . '/../Resources/views' => resource_path('views/vendor/datatable'),
+            ], 'datatable-views');
+
+            $this->publishes([
+                __DIR__ . '/../Resources/dist' => public_path('vendor/dtable'),
+            ], 'datatable-assets');
+
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        }
+
+        $this->loadBladeComponents();
+    }
+
+    /**
+     * Load Blade components.
+     */
+    protected function loadBladeComponents(): void
+    {
+        $this->loadViewComponentsAs('dtable', [
+            \SubhashLadumor\DataTablePro\View\Components\Table::class,
+        ]);
+    }
+}

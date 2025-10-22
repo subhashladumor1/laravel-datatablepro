@@ -1,0 +1,379 @@
+@import 'variables';
+
+// DTable Core Styles
+
+.dtable-wrapper {
+    font-family: $dtable-font-family;
+    font-size: $dtable-font-size;
+    line-height: $dtable-line-height;
+    color: $dtable-text-color;
+    margin: $dtable-margin 0;
+}
+
+// Toolbar
+.dtable-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dtable-toolbar-left,
+.dtable-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+// Search
+.dtable-search {
+    position: relative;
+
+    input {
+        padding: 0.5rem 1rem;
+        border: $dtable-border-width solid $dtable-border-color;
+        border-radius: $dtable-border-radius;
+        font-size: $dtable-font-size;
+        transition: $dtable-transition;
+        min-width: 250px;
+
+        &:focus {
+            outline: none;
+            border-color: $dtable-primary;
+            box-shadow: 0 0 0 3px rgba($dtable-primary, 0.1);
+        }
+    }
+}
+
+// Filters
+.dtable-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .dtable-filter {
+        padding: 0.5rem;
+        border: $dtable-border-width solid $dtable-border-color;
+        border-radius: $dtable-border-radius;
+        font-size: $dtable-font-size;
+        min-width: 150px;
+
+        &:focus {
+            outline: none;
+            border-color: $dtable-primary;
+        }
+    }
+}
+
+// Export buttons
+.dtable-export {
+    display: flex;
+    gap: 0.5rem;
+
+    .dtable-export-btn {
+        padding: 0.5rem 1rem;
+        background: $dtable-primary;
+        color: white;
+        border: none;
+        border-radius: $dtable-border-radius;
+        cursor: pointer;
+        font-size: $dtable-font-size;
+        transition: $dtable-transition;
+
+        &:hover {
+            background: darken($dtable-primary, 10%);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}
+
+// Table
+.dtable-table-container {
+    overflow-x: auto;
+    border: $dtable-border-width solid $dtable-border-color;
+    border-radius: $dtable-border-radius;
+    box-shadow: $dtable-shadow;
+}
+
+.dtable-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $dtable-bg;
+
+    thead {
+        background: $dtable-header-bg;
+        border-bottom: 2px solid $dtable-border-color;
+
+        th {
+            padding: $dtable-padding;
+            text-align: left;
+            font-weight: 600;
+            user-select: none;
+            position: relative;
+
+            &[data-orderable="true"] {
+                cursor: pointer;
+
+                &:hover {
+                    background: darken($dtable-header-bg, 5%);
+                }
+            }
+
+            .dtable-sort-icon {
+                display: inline-block;
+                margin-left: 0.5rem;
+                opacity: 0.3;
+                transition: $dtable-transition;
+
+                &::before {
+                    content: '⇅';
+                }
+
+                &.asc {
+                    opacity: 1;
+                    &::before {
+                        content: '↑';
+                    }
+                }
+
+                &.desc {
+                    opacity: 1;
+                    &::before {
+                        content: '↓';
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: $dtable-border-width solid $dtable-border-color;
+            transition: $dtable-transition;
+
+            &:hover {
+                background: $dtable-hover-bg;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        td {
+            padding: $dtable-padding;
+        }
+    }
+}
+
+// Skeleton loading
+.dtable-skeleton {
+    .dtable-skeleton-cell {
+        height: 20px;
+        background: linear-gradient(
+            90deg,
+            $dtable-skeleton-bg 0%,
+            lighten($dtable-skeleton-bg, 5%) 50%,
+            $dtable-skeleton-bg 100%
+        );
+        background-size: 200% 100%;
+        animation: dtable-skeleton-loading 1.5s ease-in-out infinite;
+        border-radius: $dtable-border-radius;
+    }
+}
+
+@keyframes dtable-skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+// Empty state
+.dtable-empty {
+    text-align: center;
+    padding: 2rem !important;
+    color: lighten($dtable-text-color, 30%);
+    font-style: italic;
+}
+
+// Error state
+.dtable-error {
+    text-align: center;
+    padding: 2rem !important;
+    color: $dtable-danger;
+    background: lighten($dtable-danger, 45%);
+}
+
+// Footer
+.dtable-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dtable-info {
+    color: lighten($dtable-text-color, 20%);
+    font-size: 0.9em;
+}
+
+// Pagination
+.dtable-pagination-buttons {
+    display: flex;
+    gap: 0.25rem;
+
+    .dtable-page-btn {
+        padding: 0.5rem 0.75rem;
+        border: $dtable-border-width solid $dtable-border-color;
+        background: $dtable-bg;
+        color: $dtable-text-color;
+        cursor: pointer;
+        transition: $dtable-transition;
+        border-radius: $dtable-border-radius;
+        font-size: $dtable-font-size;
+
+        &:hover:not(:disabled) {
+            background: $dtable-hover-bg;
+            border-color: $dtable-primary;
+        }
+
+        &.active {
+            background: $dtable-primary;
+            color: white;
+            border-color: $dtable-primary;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    span {
+        padding: 0.5rem 0.25rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// Badges
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+
+    &.badge-primary { background: $dtable-primary; color: white; }
+    &.badge-secondary { background: $dtable-secondary; color: white; }
+    &.badge-success { background: $dtable-success; color: white; }
+    &.badge-danger { background: $dtable-danger; color: white; }
+    &.badge-warning { background: $dtable-warning; color: #212529; }
+    &.badge-info { background: $dtable-info; color: white; }
+}
+
+// Avatar
+.dtable-avatar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .dtable-avatar-circle {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 0.85em;
+    }
+}
+
+// Status
+.dtable-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .dtable-status-icon {
+        font-size: 1.2em;
+    }
+}
+
+// Boolean
+.dtable-bool-true {
+    color: $dtable-success;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.dtable-bool-false {
+    color: $dtable-danger;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+// Image
+.dtable-image {
+    border-radius: $dtable-border-radius;
+    border: $dtable-border-width solid $dtable-border-color;
+}
+
+// Progress
+.dtable-progress {
+    position: relative;
+    height: 20px;
+    background: $dtable-skeleton-bg;
+    border-radius: $dtable-border-radius;
+    overflow: hidden;
+
+    .dtable-progress-bar {
+        height: 100%;
+        background: $dtable-primary;
+        transition: width 0.3s ease;
+
+        &.bg-success { background: $dtable-success; }
+        &.bg-danger { background: $dtable-danger; }
+        &.bg-warning { background: $dtable-warning; }
+        &.bg-info { background: $dtable-info; }
+    }
+
+    .dtable-progress-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.85em;
+        font-weight: 600;
+    }
+}
+
+// JSON
+.dtable-json {
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: $dtable-border-radius;
+    font-size: 0.85em;
+    max-height: 200px;
+    overflow: auto;
+}
