@@ -1,0 +1,70 @@
+{
+    "name": "subhashladumor1/laravel-datatablepro",
+    "description": "High-performance, responsive Laravel DataTables with real-time search, sorting, filtering, pagination, and advanced export capabilities",
+    "keywords": ["laravel", "datatable", "datatables", "export", "csv", "pdf", "xlsx", "responsive", "realtime"],
+    "type": "library",
+    "license": "MIT",
+    "version":"1.0.0",
+    "authors": [
+        {
+            "name": "Subhash Ladumor"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/console": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/database": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/cache": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/http": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "mockery/mockery": "^1.6"
+    },
+    "suggest": {
+        "maatwebsite/excel": "Required for XLSX export functionality",
+        "barryvdh/laravel-dompdf": "Required for PDF export functionality",
+        "intervention/image": "Required for advanced image export functionality"
+    },
+    "autoload": {
+        "psr-4": {
+            "SubhashLadumor\\DataTablePro\\": "src/"
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SubhashLadumor\\DataTablePro\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider"
+            ],
+            "aliases": {
+                "DataTable": "SubhashLadumor\\DataTablePro\\Facades\\DataTable"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "cs-check": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "vendor/bin/php-cs-fixer fix",
+        "static": "vendor/bin/phpstan analyse --memory-limit=2G"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

@@ -1,0 +1,11 @@
+parameters:
+    level: 7
+    paths:
+        - src
+    excludePaths:
+        - src/Resources
+    tmpDir: build/phpstan
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+        - '#Unsafe usage of new static#'

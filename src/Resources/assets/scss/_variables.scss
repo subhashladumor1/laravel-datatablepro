@@ -1,0 +1,43 @@
+// DTable Variables
+
+// Colors
+$dtable-primary: #3490dc !default;
+$dtable-secondary: #6c757d !default;
+$dtable-success: #38c172 !default;
+$dtable-danger: #e3342f !default;
+$dtable-warning: #ffed4e !default;
+$dtable-info: #6cb2eb !default;
+
+$dtable-bg: #ffffff !default;
+$dtable-border-color: #dee2e6 !default;
+$dtable-text-color: #212529 !default;
+$dtable-header-bg: #f8f9fa !default;
+$dtable-hover-bg: #f1f3f5 !default;
+$dtable-skeleton-bg: #e9ecef !default;
+
+// Spacing
+$dtable-padding: 0.75rem !default;
+$dtable-margin: 1rem !default;
+
+// Typography
+$dtable-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$dtable-font-size: 14px !default;
+$dtable-line-height: 1.5 !default;
+
+// Border
+$dtable-border-width: 1px !default;
+$dtable-border-radius: 4px !default;
+
+// Shadows
+$dtable-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !default;
+$dtable-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1) !default;
+
+// Transitions
+$dtable-transition: all 0.3s ease !default;
+
+// Responsive
+$dtable-mobile-breakpoint: 768px !default;
+
+// Z-index
+$dtable-z-index-modal: 1050 !default;
+$dtable-z-index-dropdown: 1000 !default;
