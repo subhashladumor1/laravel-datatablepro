@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\DataTable;
+namespace SubhashLadumor1\DataTablePro\DataTable;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
-use SubhashLadumor\DataTablePro\DataTable\Exporters\CsvExporter;
-use SubhashLadumor\DataTablePro\DataTable\Exporters\ImageExporter;
-use SubhashLadumor\DataTablePro\DataTable\Exporters\PdfExporter;
-use SubhashLadumor\DataTablePro\DataTable\Exporters\XlsxExporter;
-use SubhashLadumor\DataTablePro\Exceptions\DataTableException;
+use SubhashLadumor1\DataTablePro\DataTable\Exporters\CsvExporter;
+use SubhashLadumor1\DataTablePro\DataTable\Exporters\ImageExporter;
+use SubhashLadumor1\DataTablePro\DataTable\Exporters\PdfExporter;
+use SubhashLadumor1\DataTablePro\DataTable\Exporters\XlsxExporter;
+use SubhashLadumor1\DataTablePro\Exceptions\DataTableException;
 
 /**
  * ExportManager

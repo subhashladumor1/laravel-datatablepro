@@ -6,9 +6,9 @@ if (!function_exists('datatable')) {
     /**
      * Create a new DataTable Builder instance.
      *
-     * @return \SubhashLadumor\DataTablePro\DataTable\Builder
+     * @return \SubhashLadumor1\DataTablePro\DataTable\Builder
      */
-    function datatable(): \SubhashLadumor\DataTablePro\DataTable\Builder
+    function datatable(): \SubhashLadumor1\DataTablePro\DataTable\Builder
     {
         return app('datatable');
     }
@@ -18,9 +18,9 @@ if (!function_exists('dtable_column')) {
     /**
      * Create a new DataTable Column instance.
      */
-    function dtable_column(string $key, string $label): \SubhashLadumor\DataTablePro\DataTable\Column
+    function dtable_column(string $key, string $label): \SubhashLadumor1\DataTablePro\DataTable\Column
     {
-        return \SubhashLadumor\DataTablePro\DataTable\Column::make($key, $label);
+        return \SubhashLadumor1\DataTablePro\DataTable\Column::make($key, $label);
     }
 }
 
@@ -28,9 +28,9 @@ if (!function_exists('dtable_filter')) {
     /**
      * Create a new DataTable Filter instance.
      */
-    function dtable_filter(string $key, string $type, string $label): \SubhashLadumor\DataTablePro\DataTable\Filter
+    function dtable_filter(string $key, string $type, string $label): \SubhashLadumor1\DataTablePro\DataTable\Filter
     {
-        return \SubhashLadumor\DataTablePro\DataTable\Filter::make($key, $type, $label);
+        return \SubhashLadumor1\DataTablePro\DataTable\Filter::make($key, $type, $label);
     }
 }
 

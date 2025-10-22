@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Tests\Feature;
+namespace SubhashLadumor1\DataTablePro\Tests\Feature;
 
 use Illuminate\Support\Facades\View;
 use Orchestra\Testbench\TestCase;
-use SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider;
+use SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider;
 
 class BladeComponentTest extends TestCase
 {
@@ -27,6 +27,6 @@ class BladeComponentTest extends TestCase
         $this->assertTrue(array_key_exists(
             'dtable-table',
             app('blade.compiler')->getClassComponentAliases()
-        ) || class_exists(\SubhashLadumor\DataTablePro\View\Components\Table::class));
+        ) || class_exists(\SubhashLadumor1\DataTablePro\View\Components\Table::class));
     }
 }

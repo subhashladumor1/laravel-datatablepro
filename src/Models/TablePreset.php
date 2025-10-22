@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Models;
+namespace SubhashLadumor1\DataTablePro\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

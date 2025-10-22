@@ -25,8 +25,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 
 class UserController extends Controller
 {
@@ -158,7 +158,7 @@ Column::make('status', 'Status')
 ### Text Filter
 
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 Builder::make()
     ->filters([
@@ -441,8 +441,8 @@ Builder::make()
 
 ```php
 // In your controller
-use function SubhashLadumor\DataTablePro\datatable;
-use function SubhashLadumor\DataTablePro\dtable_column;
+use function SubhashLadumor1\DataTablePro\datatable;
+use function SubhashLadumor1\DataTablePro\dtable_column;
 
 $table = datatable()
     ->eloquent(User::query())
@@ -520,9 +520,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class OrderController extends Controller
 {

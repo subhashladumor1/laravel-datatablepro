@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\DataTable\QueryHandler;
+namespace SubhashLadumor1\DataTablePro\DataTable\QueryHandler;
 
 use Illuminate\Database\Query\Builder;
-use SubhashLadumor\DataTablePro\Contracts\DataTableEngineInterface;
-use SubhashLadumor\DataTablePro\DataTable\ColumnCollection;
+use SubhashLadumor1\DataTablePro\Contracts\DataTableEngineInterface;
+use SubhashLadumor1\DataTablePro\DataTable\ColumnCollection;
 
 /**
  * QueryBuilderHandler

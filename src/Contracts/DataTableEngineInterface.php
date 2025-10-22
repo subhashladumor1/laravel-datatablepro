@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Contracts;
+namespace SubhashLadumor1\DataTablePro\Contracts;
 
 use Illuminate\Http\Request;
 

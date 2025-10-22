@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use SubhashLadumor\DataTablePro\Http\Controllers\DataTableController;
+use SubhashLadumor1\DataTablePro\Http\Controllers\DataTableController;
 
 /*
 |--------------------------------------------------------------------------

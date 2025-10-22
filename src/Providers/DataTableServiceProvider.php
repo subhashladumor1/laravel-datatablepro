@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Providers;
+namespace SubhashLadumor1\DataTablePro\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\ExportManager;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\ExportManager;
 
 /**
  * DataTableServiceProvider
@@ -68,7 +68,7 @@ class DataTableServiceProvider extends ServiceProvider
     protected function loadBladeComponents(): void
     {
         $this->loadViewComponentsAs('dtable', [
-            \SubhashLadumor\DataTablePro\View\Components\Table::class,
+            \SubhashLadumor1\DataTablePro\View\Components\Table::class,
         ]);
     }
 }

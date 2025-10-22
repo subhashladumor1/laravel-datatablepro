@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Tests\Unit;
+namespace SubhashLadumor1\DataTablePro\Tests\Unit;
 
 use Orchestra\Testbench\TestCase;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
-use SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider;
 
 class BuilderTest extends TestCase
 {

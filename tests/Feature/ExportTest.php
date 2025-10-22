@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Tests\Feature;
+namespace SubhashLadumor1\DataTablePro\Tests\Feature;
 
 use Orchestra\Testbench\TestCase;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider;
 
 class ExportTest extends TestCase
 {
@@ -36,7 +36,7 @@ class ExportTest extends TestCase
     /** @test */
     public function it_throws_exception_when_export_disabled(): void
     {
-        $this->expectException(\SubhashLadumor\DataTablePro\Exceptions\DataTableException::class);
+        $this->expectException(\SubhashLadumor1\DataTablePro\Exceptions\DataTableException::class);
 
         $datatable = Builder::make()
             ->collection(collect([]))
