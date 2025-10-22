@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor1\DataTablePro\Providers;
+namespace SubhashLadumor1\\DataTablePro\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use SubhashLadumor1\DataTablePro\DataTable\Builder;
-use SubhashLadumor1\DataTablePro\DataTable\ExportManager;
+use SubhashLadumor1\\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\\DataTablePro\DataTable\ExportManager;
 
 /**
  * DataTableServiceProvider
@@ -52,9 +52,20 @@ class DataTableServiceProvider extends ServiceProvider
                 __DIR__ . '/../Resources/views' => resource_path('views/vendor/datatable'),
             ], 'datatable-views');
 
-            $this->publishes([
-                __DIR__ . '/../Resources/dist' => public_path('vendor/dtable'),
-            ], 'datatable-assets');
+            // Publish built assets if available, otherwise publish raw assets
+            $distPath = __DIR__ . '/../Resources/dist';
+            $assetsPath = __DIR__ . '/../Resources/assets';
+            
+            if (is_dir($distPath)) {
+                $this->publishes([
+                    $distPath => public_path('vendor/dtable'),
+                ], 'datatable-assets');
+            } else {
+                // Publish raw assets if dist doesn't exist
+                $this->publishes([
+                    $assetsPath => public_path('vendor/dtable/raw'),
+                ], 'datatable-assets');
+            }
 
             $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         }
@@ -68,7 +79,7 @@ class DataTableServiceProvider extends ServiceProvider
     protected function loadBladeComponents(): void
     {
         $this->loadViewComponentsAs('dtable', [
-            \SubhashLadumor1\DataTablePro\View\Components\Table::class,
+            \SubhashLadumor\DataTablePro\View\Components\Table::class,
         ]);
     }
 }

@@ -1,10 +1,49 @@
 # Laravel DataTablePro
 
-[![Latest Version](https://img.shields.io/packagist/v/subhashladumor1/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor1/laravel-datatablepro)
-[![Total Downloads](https://img.shields.io/packagist/dt/subhashladumor1/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor1/laravel-datatablepro)
-[![License](https://img.shields.io/packagist/l/subhashladumor1/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor1/laravel-datatablepro)
+[![Latest Version](https://img.shields.io/packagist/v/subhashladumor/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor/laravel-datatablepro)
+[![Total Downloads](https://img.shields.io/packagist/dt/subhashladumor/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor/laravel-datatablepro)
+[![License](https://img.shields.io/packagist/l/subhashladumor/laravel-datatablepro.svg)](https://packagist.org/packages/subhashladumor/laravel-datatablepro)
 
 A high-performance, feature-rich Laravel package for creating responsive DataTables with real-time search, sorting, filtering, pagination, and advanced export capabilities (CSV, PDF, XLSX, Image) without page reloads.
+
+## 🚨 Quick Fix for Common Errors
+
+### Error: "Can't locate path: .../Resources/dist"
+
+**Solution:** Build the assets first!
+
+```bash
+# Windows (PowerShell)
+.\quick-fix.bat
+
+# Linux/Mac
+chmod +x quick-fix.sh
+./quick-fix.sh
+```
+
+**OR manually:**
+
+```bash
+cd vendor/subhashladumor/laravel-datatablepro
+npm install
+npm run build
+cd ../../..
+php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets" --force
+```
+
+### Error: "DTable is not defined"
+
+**Solution:** Make sure your layout has:
+
+```blade
+<!-- In <head> -->
+@stack('styles')
+
+<!-- Before </body> -->
+@stack('scripts')
+```
+
+See [BUILD.md](BUILD.md) for detailed troubleshooting.
 
 ## Features
 
@@ -35,7 +74,7 @@ A high-performance, feature-rich Laravel package for creating responsive DataTab
 ## Installation
 
 ```bash
-composer require subhashladumor1/laravel-datatablepro
+composer require subhashladumor/laravel-datatablepro
 ```
 
 ### Optional Dependencies
@@ -55,13 +94,13 @@ composer require intervention/image
 
 ```bash
 # Publish configuration
-php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-config"
+php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-config"
 
 # Publish views
-php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-views"
 
-# Publish assets
-php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+# Publish assets (after building - see above)
+php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets"
 
 # Run migrations for table presets
 php artisan migrate
