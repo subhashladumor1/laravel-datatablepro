@@ -4,7 +4,7 @@
     "keywords": ["laravel", "datatable", "datatables", "export", "csv", "pdf", "xlsx", "responsive", "realtime"],
     "type": "library",
     "license": "MIT",
-    "version":"1.0.0",
+    "version":"1.0.1",
     "authors": [
         {
             "name": "Subhash Ladumor"
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SubhashLadumor\\DataTablePro\\": "src/"
+            "SubhashLadumor1\\DataTablePro\\": "src/"
         },
         "files": [
             "src/Helpers.php"
@@ -40,16 +40,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SubhashLadumor\\DataTablePro\\Tests\\": "tests/"
+            "SubhashLadumor1\\DataTablePro\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider"
+                "SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider"
             ],
             "aliases": {
-                "DataTable": "SubhashLadumor\\DataTablePro\\Facades\\DataTable"
+                "DataTable": "SubhashLadumor1\\DataTablePro\\Facades\\DataTable"
             }
         }
     },
