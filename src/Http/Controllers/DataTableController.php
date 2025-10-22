@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Http\Controllers;
+namespace SubhashLadumor1\DataTablePro\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-use SubhashLadumor\DataTablePro\Http\Requests\DataTableRequest;
+use SubhashLadumor1\DataTablePro\Http\Requests\DataTableRequest;
 
 /**
  * DataTableController

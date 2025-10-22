@@ -11,9 +11,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class UserController extends Controller
 {
@@ -58,9 +58,9 @@ class UserController extends Controller
 namespace App\Http\Controllers;
 
 use App\Models\Order;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class OrderController extends Controller
 {
@@ -143,9 +143,9 @@ class OrderController extends Controller
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class PostController extends Controller
 {
@@ -220,9 +220,9 @@ class PostController extends Controller
 namespace App\Http\Controllers;
 
 use App\Models\PageView;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class AnalyticsController extends Controller
 {
@@ -283,9 +283,9 @@ class AnalyticsController extends Controller
 namespace App\Http\Controllers;
 
 use App\Models\File;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 class FileController extends Controller
 {
@@ -373,8 +373,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 
 class UserExportController extends Controller
 {

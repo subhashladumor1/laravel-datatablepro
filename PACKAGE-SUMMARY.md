@@ -109,8 +109,8 @@ composer cs-check
 composer static
 
 # 6. Publish assets (in a Laravel app)
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 
 # 7. Run migrations
 php artisan migrate
@@ -123,8 +123,8 @@ php artisan migrate
 ### Controller
 
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 
 public function datatable(Request $request)
 {

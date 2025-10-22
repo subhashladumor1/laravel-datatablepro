@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\DataTable\Exporters;
+namespace SubhashLadumor1\DataTablePro\DataTable\Exporters;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\Jobs\ExportDataTableJob;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\Jobs\ExportDataTableJob;
 
 /**
  * XlsxExporter

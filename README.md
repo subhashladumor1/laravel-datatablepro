@@ -55,13 +55,13 @@ composer require intervention/image
 
 ```bash
 # Publish configuration
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-config"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-config"
 
 # Publish views
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
 
 # Publish assets
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 
 # Run migrations for table presets
 php artisan migrate
@@ -79,8 +79,8 @@ npm run build
 ### 1. Create a Controller
 
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 use App\Models\User;
 
 class UserController extends Controller
@@ -182,7 +182,7 @@ Column::make('price', 'Price')
 ### Filters
 
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Filter;
+use SubhashLadumor1\DataTablePro\DataTable\Filter;
 
 Builder::make()
     ->eloquent(User::query())
@@ -268,8 +268,8 @@ npm install
 npm run build
 
 # 3. Publish package resources
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 
 # 4. Run migrations
 php artisan migrate

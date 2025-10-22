@@ -22,7 +22,7 @@ $table = DataTable::of(User::query());
 
 **After:**
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
 
 $table = Builder::make()->eloquent(User::query());
 ```
@@ -36,7 +36,7 @@ $table = Builder::make()->eloquent(User::query());
 
 **After:**
 ```php
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 
 ->columns([
     Column::make('name', 'Name'),
@@ -68,7 +68,7 @@ use SubhashLadumor\DataTablePro\DataTable\Column;
 
 ### Breaking Changes
 
-1. **Namespace Changes**: All classes moved to `SubhashLadumor\DataTablePro` namespace
+1. **Namespace Changes**: All classes moved to `SubhashLadumor1\DataTablePro` namespace
 2. **Configuration File**: Renamed from `datatables.php` to `datatable.php`
 3. **Asset Publishing**: New tag names for publishing
 4. **Facade**: Now `DataTable` instead of `DataTables`
@@ -82,7 +82,7 @@ composer require subhashladumor1/laravel-datatablepro:^1.0
 
 2. Update configuration:
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-config" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-config" --force
 ```
 
 3. Update imports in your code:
@@ -91,16 +91,16 @@ php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\Dat
 use Yajra\DataTables\DataTables;
 
 // New
-use SubhashLadumor\DataTablePro\Facades\DataTable;
-use SubhashLadumor\DataTablePro\DataTable\Builder;
-use SubhashLadumor\DataTablePro\DataTable\Column;
+use SubhashLadumor1\DataTablePro\Facades\DataTable;
+use SubhashLadumor1\DataTablePro\DataTable\Builder;
+use SubhashLadumor1\DataTablePro\DataTable\Column;
 ```
 
 4. Update controller methods (see examples in README.md)
 
 5. Republish assets:
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 npm run build
 ```
 

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\DataTable;
+namespace SubhashLadumor1\DataTablePro\DataTable;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use SubhashLadumor\DataTablePro\Contracts\DataTableEngineInterface;
-use SubhashLadumor\DataTablePro\DataTable\QueryHandler\CollectionHandler;
-use SubhashLadumor\DataTablePro\DataTable\QueryHandler\EloquentQueryHandler;
-use SubhashLadumor\DataTablePro\DataTable\QueryHandler\QueryBuilderHandler;
-use SubhashLadumor\DataTablePro\Exceptions\DataTableException;
+use SubhashLadumor1\DataTablePro\Contracts\DataTableEngineInterface;
+use SubhashLadumor1\DataTablePro\DataTable\QueryHandler\CollectionHandler;
+use SubhashLadumor1\DataTablePro\DataTable\QueryHandler\EloquentQueryHandler;
+use SubhashLadumor1\DataTablePro\DataTable\QueryHandler\QueryBuilderHandler;
+use SubhashLadumor1\DataTablePro\Exceptions\DataTableException;
 
 /**
  * Builder

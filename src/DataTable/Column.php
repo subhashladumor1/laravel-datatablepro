@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\DataTable;
+namespace SubhashLadumor1\DataTablePro\DataTable;
 
 /**
  * Column

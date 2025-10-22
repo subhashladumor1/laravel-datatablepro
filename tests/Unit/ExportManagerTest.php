@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Tests\Unit;
+namespace SubhashLadumor1\DataTablePro\Tests\Unit;
 
 use Orchestra\Testbench\TestCase;
-use SubhashLadumor\DataTablePro\DataTable\ExportManager;
-use SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider;
+use SubhashLadumor1\DataTablePro\DataTable\ExportManager;
+use SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider;
 
 class ExportManagerTest extends TestCase
 {
@@ -39,10 +39,10 @@ class ExportManagerTest extends TestCase
     /** @test */
     public function it_throws_exception_for_unsupported_format(): void
     {
-        $this->expectException(\SubhashLadumor\DataTablePro\Exceptions\DataTableException::class);
+        $this->expectException(\SubhashLadumor1\DataTablePro\Exceptions\DataTableException::class);
 
         $manager = new ExportManager($this->app);
-        $builder = \Mockery::mock(\SubhashLadumor\DataTablePro\DataTable\Builder::class);
+        $builder = \Mockery::mock(\SubhashLadumor1\DataTablePro\DataTable\Builder::class);
         $request = new \Illuminate\Http\Request();
 
         $manager->export($builder, 'unsupported', $request);

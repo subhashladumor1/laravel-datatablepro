@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Exceptions;
+namespace SubhashLadumor1\DataTablePro\Exceptions;
 
 use Exception;
 

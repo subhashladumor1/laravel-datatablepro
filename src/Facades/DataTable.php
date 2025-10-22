@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Facades;
+namespace SubhashLadumor1\DataTablePro\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * DataTable Facade
  *
- * @method static \SubhashLadumor\DataTablePro\DataTable\Builder eloquent(\Illuminate\Database\Eloquent\Builder $query)
- * @method static \SubhashLadumor\DataTablePro\DataTable\Builder query(\Illuminate\Database\Query\Builder $query)
- * @method static \SubhashLadumor\DataTablePro\DataTable\Builder collection(\Illuminate\Support\Collection $collection)
+ * @method static \SubhashLadumor1\DataTablePro\DataTable\Builder eloquent(\Illuminate\Database\Eloquent\Builder $query)
+ * @method static \SubhashLadumor1\DataTablePro\DataTable\Builder query(\Illuminate\Database\Query\Builder $query)
+ * @method static \SubhashLadumor1\DataTablePro\DataTable\Builder collection(\Illuminate\Support\Collection $collection)
  *
- * @see \SubhashLadumor\DataTablePro\DataTable\Builder
+ * @see \SubhashLadumor1\DataTablePro\DataTable\Builder
  */
 class DataTable extends Facade
 {

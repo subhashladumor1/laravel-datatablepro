@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\View\Components;
+namespace SubhashLadumor1\DataTablePro\View\Components;
 
 use Illuminate\View\Component;
 

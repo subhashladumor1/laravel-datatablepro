@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Traits;
+namespace SubhashLadumor1\DataTablePro\Traits;
 
 /**
  * WhitelistsRequests
@@ -79,13 +79,13 @@ trait WhitelistsRequests
      * Validate that all requested columns are whitelisted.
      *
      * @param array<string> $columns
-     * @throws \SubhashLadumor\DataTablePro\Exceptions\DataTableException
+     * @throws \SubhashLadumor1\DataTablePro\Exceptions\DataTableException
      */
     protected function validateColumns(array $columns): void
     {
         foreach ($columns as $column) {
             if (!$this->isColumnWhitelisted($column)) {
-                throw \SubhashLadumor\DataTablePro\Exceptions\DataTableException::invalidColumn($column);
+                throw \SubhashLadumor1\DataTablePro\Exceptions\DataTableException::invalidColumn($column);
             }
         }
     }
@@ -94,13 +94,13 @@ trait WhitelistsRequests
      * Validate that all requested relationships are whitelisted.
      *
      * @param array<string> $relationships
-     * @throws \SubhashLadumor\DataTablePro\Exceptions\DataTableException
+     * @throws \SubhashLadumor1\DataTablePro\Exceptions\DataTableException
      */
     protected function validateRelationships(array $relationships): void
     {
         foreach ($relationships as $relationship) {
             if (!$this->isRelationshipWhitelisted($relationship)) {
-                throw \SubhashLadumor\DataTablePro\Exceptions\DataTableException::invalidRelationship($relationship);
+                throw \SubhashLadumor1\DataTablePro\Exceptions\DataTableException::invalidRelationship($relationship);
             }
         }
     }

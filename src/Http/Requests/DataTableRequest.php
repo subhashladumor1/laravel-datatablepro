@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SubhashLadumor\DataTablePro\Http\Requests;
+namespace SubhashLadumor1\DataTablePro\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
