@@ -13,7 +13,7 @@ cd vendor/subhashladumor/laravel-datatablepro
 npm install
 npm run build
 cd ../../..
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 ```
 
 ### Option 2: Use CDN (Quick Fix)
@@ -39,7 +39,7 @@ If you can't build the assets, temporarily use CDN links in your blade file:
 The package now automatically publishes raw assets if built assets don't exist:
 
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 ```
 
 This will publish to `public/vendor/dtable/raw/`. Then update your blade component to use:
@@ -67,7 +67,7 @@ npm run build
 cd ../../..
 
 # Publish assets
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 ```
 
 ## Verify Installation

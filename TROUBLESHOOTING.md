@@ -42,7 +42,7 @@ npm run build
 cd ../../..
 
 # 5. Publish assets
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 #### Option C: Use Raw Assets (Development Only)
@@ -50,7 +50,7 @@ php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\Dat
 The package now automatically publishes raw assets if dist doesn't exist:
 
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets"
 ```
 
 Assets will be published to `public/vendor/dtable/raw/`.
@@ -99,7 +99,7 @@ If you see 404 errors:
 
 ```bash
 # Republish assets
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 #### C. Clear Cache
@@ -125,7 +125,7 @@ Verify the JavaScript files exist:
 If files don't exist, republish:
 
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 ---
@@ -134,7 +134,7 @@ php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\Dat
 
 **Error Message:**
 ```
-Class 'SubhashLadumor\DataTablePro\...' not found
+Class 'SubhashLadumor1\DataTablePro\...' not found
 ```
 
 **Solution:**
@@ -159,7 +159,7 @@ composer require subhashladumor/laravel-datatablepro
 #### A. Check CSS is Published
 
 ```bash
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 #### B. Verify CSS Path

@@ -1,9 +1,40 @@
 # 🔧 FIX FOR YOUR ERRORS
 
-## Your Two Errors:
+## Common Errors:
 
 ### ❌ Error 1: "Can't locate path: .../Resources/dist"
 ### ❌ Error 2: "Uncaught ReferenceError: DTable is not defined"
+### ❌ Error 3: "Unable to locate class [SubhashLadumor\DataTablePro\View\Components\Table]"
+
+---
+
+## ⚡ QUICK FIX for Error 3 (Cache Issue)
+
+**If you see "Unable to locate class" error:**
+
+This happens when Laravel cached the old namespace. Copy the script below to your Laravel app:
+
+```bash
+# Copy the cache-clear script
+cp vendor/subhashladumor/laravel-datatablepro/clear-cache.bat .
+
+# Run it
+.\clear-cache.bat
+```
+
+**Or run manually:**
+```bash
+cd C:\Users\Subhash\Documents\GitHub\taxido-laravel
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan route:clear
+php artisan clear-compiled
+composer dump-autoload -o
+php artisan package:discover --ansi
+```
+
+**See detailed fix:** [CACHE-CLEAR-FIX.md](CACHE-CLEAR-FIX.md)
 
 ---
 
@@ -35,7 +66,7 @@ npm run build
 cd ..\..\..
 
 # 4. Publish assets
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 
 # 5. Clear caches
 php artisan view:clear
@@ -50,7 +81,7 @@ php artisan config:clear
 cd C:\Users\Subhash\Documents\GitHub\taxido-laravel
 
 # Just publish raw assets (no build needed)
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 
 # Clear caches
 php artisan view:clear
@@ -104,7 +135,7 @@ C:\Users\Subhash\Documents\GitHub\taxido-laravel\public\vendor\dtable\raw\js\dta
 
 If files don't exist, republish:
 ```powershell
-php artisan vendor:publish --provider="SubhashLadumor\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\DataTablePro\Providers\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 ### Step 3: Check Browser Console

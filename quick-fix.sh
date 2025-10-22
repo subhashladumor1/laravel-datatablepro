@@ -58,15 +58,15 @@ fi
 
 echo ""
 echo "Publishing assets..."
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets" --force
 
 echo ""
 echo "Publishing views..."
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-views"
 
 echo ""
 echo "Publishing config..."
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-config"
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-config"
 
 echo ""
 echo "Running migrations..."
