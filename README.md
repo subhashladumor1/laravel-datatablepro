@@ -28,7 +28,7 @@ cd vendor/subhashladumor/laravel-datatablepro
 npm install
 npm run build
 cd ../../..
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets" --force
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets" --force
 ```
 
 ### Error: "DTable is not defined"
@@ -94,13 +94,13 @@ composer require intervention/image
 
 ```bash
 # Publish configuration
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-config"
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-config"
 
 # Publish views
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-views"
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-views"
 
 # Publish assets (after building - see above)
-php artisan vendor:publish --provider="SubhashLadumor\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets"
+php artisan vendor:publish --provider="SubhashLadumor1\\DataTablePro\\Providers\\DataTableServiceProvider" --tag="datatable-assets"
 
 # Run migrations for table presets
 php artisan migrate
